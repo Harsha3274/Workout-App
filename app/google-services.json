@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "530717621943",
+    "project_id": "workoutapp-72921",
+    "storage_bucket": "workoutapp-72921.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530717621943:android:144f4f2128233960ab5732",
+        "android_client_info": {
+          "package_name": "com.wodo.workoutapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt0aU3C1jMUTb2odWy8sFidGPmnlyqmDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
