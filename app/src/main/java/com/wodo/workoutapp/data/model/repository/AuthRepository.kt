@@ -1,11 +1,10 @@
-package com.wodo.workoutapp.viewmodel
+package com.wodo.workoutapp.data.model.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
 
-class AuthViewModel : ViewModel() {
+class AuthRepository {
 
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
@@ -16,14 +15,16 @@ class AuthViewModel : ViewModel() {
     val signupStatus: LiveData<Boolean> get() = _signupStatus
 
     fun login(email: String, password: String) {
-        firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
-            _loginStatus.value = task.isSuccessful
-        }
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                _loginStatus.value = task.isSuccessful
+            }
     }
 
     fun signup(email: String, password: String) {
-        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
-            _signupStatus.value = task.isSuccessful
-        }
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                _signupStatus.value = task.isSuccessful
+            }
     }
 }
